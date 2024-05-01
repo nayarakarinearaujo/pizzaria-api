@@ -1,23 +1,26 @@
 package com.pizzariafatiafeliz.pizzariaapi.models;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Bebida {
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-
         private Long idBebida;
+
+        @Column
         private String nome;
-        private Double preco;
 
+        @Column
+        private Float preco;
 
+        public Bebida() {
+
+        }
         // Getters e Setters
+
 
         public Long getIdBebida() {
                 return idBebida;
@@ -27,19 +30,19 @@ public class Bebida {
                 this.idBebida = idBebida;
         }
 
+        public Float getPreco() {
+                return preco;
+        }
+
+        public void setPreco(Float preco) {
+                this.preco = preco;
+        }
+
         public String getNome() {
                 return nome;
         }
 
         public void setNome(String nome) {
                 this.nome = nome;
-        }
-
-        public Double getPreco() {
-                return preco;
-        }
-
-        public void setPreco(Double preco) {
-                this.preco = preco;
         }
 }

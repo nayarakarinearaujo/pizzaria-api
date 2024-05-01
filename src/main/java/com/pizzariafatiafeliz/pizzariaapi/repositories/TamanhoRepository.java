@@ -1,4 +1,7 @@
 package com.pizzariafatiafeliz.pizzariaapi.repositories;
 
-public interface TamanhoRepository {
+import com.pizzariafatiafeliz.pizzariaapi.models.Tamanho;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TamanhoRepository extends JpaRepository<Tamanho, Long> {
 }
