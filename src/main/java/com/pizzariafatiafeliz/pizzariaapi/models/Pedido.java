@@ -1,39 +1,31 @@
 package com.pizzariafatiafeliz.pizzariaapi.models;
 
 import jakarta.persistence.*;
+import java.util.Date;
 
-import java.sql.Timestamp;
-import java.util.List;
 
 @Entity
 public class Pedido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    // Adicionando o campo idPedido
     private Long idPedido;
+
 
     @ManyToOne
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
-    private Long fornadaId;
+    @ManyToOne
+    @JoinColumn(name = "fornada_id")
+    private Fornada fornada;
 
-    private Timestamp dataHora;
+    @Column
+    private Date dataHora;
 
+    public Pedido(){
 
-
-    //Métodos de acesso
-    public Long getId() {
-        return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    // Getter e Setter para idPedido
     public Long getIdPedido() {
         return idPedido;
     }
@@ -50,23 +42,21 @@ public class Pedido {
         this.cliente = cliente;
     }
 
-    public Long getFornadaId() {
-        return fornadaId;
+    public Fornada getFornada() {
+        return fornada;
     }
 
-    public void setFornadaId(Long fornadaId) {
-        this.fornadaId = fornadaId;
+    public void setFornada(Fornada fornada) {
+        this.fornada = fornada;
     }
 
-    public Timestamp getDataHora() {
+    public Date getDataHora() {
         return dataHora;
     }
 
-    public void setDataHora(Timestamp dataHora) {
+    public void setDataHora(Date dataHora) {
         this.dataHora = dataHora;
     }
-
-    public void setPedido(String nayara) {
-
-    }
 }
+
+

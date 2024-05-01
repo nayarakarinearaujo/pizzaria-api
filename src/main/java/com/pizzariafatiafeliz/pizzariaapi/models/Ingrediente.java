@@ -8,11 +8,35 @@ public class Ingrediente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idIngrediente;
 
+    @Column
+    private String nome;
 
-    // Associação muitos-para-um com a classe Pedido
-    @ManyToOne
-    @JoinColumn(name = "pedido_id") //Especifica a coluna na tabela de banco de dados que é usada para a associação.
-    private Pedido pedido;
+    @Column
+    private float preco;
 
+    public Ingrediente(){}
 
+    public long getIdIngrediente() {
+        return idIngrediente;
+    }
+
+    public void setIdIngrediente(long idIngrediente) {
+        this.idIngrediente = idIngrediente;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public float getPreco() {
+        return preco;
+    }
+
+    public void setPreco(float preco) {
+        this.preco = preco;
+    }
 }

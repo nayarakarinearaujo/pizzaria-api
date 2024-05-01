@@ -1,43 +1,33 @@
 package com.pizzariafatiafeliz.pizzariaapi.models;
 
 import jakarta.persistence.*;
-
-import java.util.List;
-
-
 @Entity
-@Table(name = "cliente")
 public class Cliente {
-    public static Object set;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idCliente;
 
     @Column
-    private String nome;
+    private  String nome;
 
     @Column
     private String telefone;
-
     @Column
     private String endereco;
-
     @Column
     private String login;
-
     @Column
-    private String senha;
+    private  String senha;
 
-    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
-    private List<Pedido> pedidos;
+    public   Cliente(){}
 
-    // Getters e Setters
-    public Long getId() {
-        return id;
+    public long getIdCliente() {
+        return idCliente;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdCliente(long idCliente) {
+        this.idCliente = idCliente;
     }
 
     public String getNome() {
@@ -79,15 +69,4 @@ public class Cliente {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-
-    public List<Pedido> getPedidos() {
-        return pedidos;
-    }
-
-    public void setPedidos(List<Pedido> pedidos) {
-        this.pedidos = pedidos;
-    }
 }
-
-
-
