@@ -1,25 +1,23 @@
 package com.pizzariafatiafeliz.pizzariaapi.models;
 
 import jakarta.persistence.*;
-
 import java.util.List;
-
 
 @Entity
 @Table(name = "cliente")
 public class Cliente {
-    public static Object set;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column //@Column(length = 50 (numero de caractere, nullable=false)
+    @Column(length = 50, nullable = false)
     private String nome;
 
     @Column
     private String telefone;
 
-    @Column
+    @Column (length = 250, nullable = false)
     private String endereco;
 
     @Column
@@ -30,6 +28,7 @@ public class Cliente {
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
     private List<Pedido> pedidos;
+    private Long idCliente;
 
     // Getters e Setters
     public Long getId() {
@@ -87,7 +86,16 @@ public class Cliente {
     public void setPedidos(List<Pedido> pedidos) {
         this.pedidos = pedidos;
     }
+
+    public void setIdCliente(Long idCliente) {
+        this.idCliente = idCliente;
+    }
+
+    public Long getIdCliente() {
+       return idCliente;
+    }
 }
+
 
 
 

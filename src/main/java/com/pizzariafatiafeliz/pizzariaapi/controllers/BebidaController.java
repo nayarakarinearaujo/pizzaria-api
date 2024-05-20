@@ -3,18 +3,22 @@ package com.pizzariafatiafeliz.pizzariaapi.controllers;
 
 import com.pizzariafatiafeliz.pizzariaapi.models.Bebida;
 import com.pizzariafatiafeliz.pizzariaapi.repositories.BebidaRepository;
+import com.pizzariafatiafeliz.pizzariaapi.swaggerDoc.BebidaControllerOpenApi;
 import org.springframework.beans.factory.annotation.Autowired;
+//import io.swagger.v3.oas.annotations.Operation;
+import org.springframework.jmx.export.annotation.ManagedOperation;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-public class BebidaController {
+public class BebidaController implements BebidaControllerOpenApi {
 
     @Autowired
     private BebidaRepository bebidaRepository;
 
+   // @Operation(summary = "Método para cadastrar um novo setor.")
     @RequestMapping(value = "/criar/Bebida", method = RequestMethod.POST)
     public Bebida save(@RequestBody Bebida bebida) {
         bebida = this.bebidaRepository.save(bebida);

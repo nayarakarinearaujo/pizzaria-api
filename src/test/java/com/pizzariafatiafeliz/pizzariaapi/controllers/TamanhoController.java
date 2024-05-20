@@ -1,6 +1,5 @@
 package com.pizzariafatiafeliz.pizzariaapi.controllers;
 
-import com.pizzariafatiafeliz.pizzariaapi.models.Ingrediente;
 import com.pizzariafatiafeliz.pizzariaapi.models.Tamanho;
 import com.pizzariafatiafeliz.pizzariaapi.repositories.TamanhoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +13,7 @@ public class TamanhoController {
 
     @Autowired
     private TamanhoRepository tamanhoRepository;
+
 
     @RequestMapping(value = "/criarTamanho", method = RequestMethod.POST)
     public Tamanho save(@RequestBody Tamanho tamanho) {
