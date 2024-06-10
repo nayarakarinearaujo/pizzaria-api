@@ -28,6 +28,19 @@ Se você acessar /clientes usando um método POST com um JSON representando um n
 O projeto fornece uma estrutura básica para uma aplicação Spring Boot que permite a manipulação de dados de acordo com o modelo ER fornecido. 
 Você pode expandir este projeto adicionando mais funcionalidades, como validações, tratamento de exceções, autenticação e autorização, entre outros.
 
+## Tecnologias Utilizadas
+
+- **Java:** Linguagem de programação principal do projeto.
+- **Spring Boot:** Framework utilizado para desenvolvimento da aplicação web.
+- **MySQL:** Banco de dados relacional utilizado para armazenamento dos dados.
+- **Postman:** Ferramenta utilizada para testar e realizar requisições HTTP à API.
+
+![Logo JAVA](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white")
+![Logo Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Logo MySql](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+![Logo Postman](https://img.shields.io/badge/Postman-FF6C37.svg?style=for-the-badge&logo=Postman&logoColor=white)
+
+
 
 
 ![apipizzaria](https://github.com/nayarakarinearaujo/pizzaria-api/assets/149000384/07d110cd-5022-40a3-ab95-a939f56ecc89)
